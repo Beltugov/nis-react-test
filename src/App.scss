@@ -1,0 +1,109 @@
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        background-color: #00838F;
+        padding: 19px 32px;
+    }
+
+    .MuiInput-input {
+        background-color: #F2F2F2;
+        box-shadow: 0px 0px 0px 1px black inset, 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 912px;
+        height: 42px;
+        padding: 0 16px;
+
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 8px;
+
+        &::placeholder {
+            font-style: italic;
+            font-weight: 400;
+            color: #828282;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .welcome {
+            font-size: 46px;
+            color: #4F4F4F;
+        }
+    }
+
+    .main-content {
+        display: flex;
+        width: 100%;
+
+        &__repo-list {
+            flex: 2;
+        }
+
+        &__repo-detail {
+            flex: 1;
+            background-color: #F2F2F2;
+            position: sticky;
+            top: 0;
+            max-height: 100vh;
+
+            .selected {
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                &-title {
+                    font-size: 32px;
+                }
+
+                &-lang-and-stars {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &__lang {
+                        border-radius: 100px;
+                        background-color: #2196F3;
+                        color: #F2F2F2;
+                        padding: 7px 10px;
+                    }
+
+                    &__star {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+
+                &-license {
+                    margin-top: 8px;
+                }
+
+            }
+
+            .unselected {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    footer {
+        min-height: 32px;
+        background-color: #4F4F4F;
+    }
+}
